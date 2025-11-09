@@ -324,6 +324,15 @@ Notebook de diagnóstico para:
 
 **Ideal para**: Diagnóstico de problemas e verificação do ambiente.
 
+### 🔧 **Lab_DataOps_Governanca_Qualidade_Fixed.ipynb** - Versão Corrigida
+Versão corrigida do laboratório principal que:
+- Evita erros de serialização do PySpark
+- Usa apenas pandas para compatibilidade
+- Implementa todas as 6 dimensões da qualidade
+- Funciona em qualquer ambiente Docker
+
+**Ideal para**: Uso quando houver problemas com a versão original.
+
 ## 📊 Datasets do Desafio
 
 Os datasets simulam uma empresa de e-commerce (**TechCommerce**) com problemas reais de qualidade:
