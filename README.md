@@ -216,134 +216,34 @@ Volume Mapping:
 ## 📚 Como Usar Este Repositório
 
 ### 1. 📖 Estude os Conceitos
-- (Leia primeiro os fundamentos teóricos)[Conceitos.md]
+- [Leia primeiro os fundamentos teóricos](Conceitos.md)
 
 ### 2. 🧪 Execute os Laboratórios
-- (Explore os datasets primeiro)[notebooks/exporaDataSets.ipynb]
-- (Execute o laboratório principal)[notebooks/Lab_DataOps_Governanca_Qualidade.ipynb]
+- [Explore os datasets primeiro](notebooks/exporaDataSets.ipynb)
+- [Execute o laboratório principal](notebooks/Lab_DataOps_Governanca_Qualidade.ipynb)
 
 ### 3. 🎯 Realize o Desafio
-(Desafio)[Desafio_Final_DataOps.md]
+[Desafio](Desafio_Final_DataOps.md)
 
 ## 🎓 Roteiro de Aprendizagem
 
 ### Módulo 1: Fundamentos
-1. 📚 Leia (Conceitos)[Conceitos.md] completamente
+1. 📚 Leia [Conceitos](Conceitos.md) completamente
 2. 🎯 Entenda os 4 pilares da governança
 3. 📊 Memorize as 6 dimensões da qualidade
 
 ### Módulo 2: Prática
 1. 🚀 Configure o ambiente (Docker ou Codespaces)
-2. 📊 (Execute a exploração dos dados)[exporaDataSets.ipynb]
+2. 📊 [Execute a exploração dos dados](exporaDataSets.ipynb)
 3. 🧪 Execute o laboratório principal passo a passo
 4. 🔍 Experimente com Great Expectations
 5. 📈 Analise os Data Docs gerados
 
 ### Módulo 3: Desafio
-1. 📋 (Leia)[Desafio_Final_DataOps.md] 
+1. 📋 [Leia](Desafio_Final_DataOps.md) 
 2. 🔍 Analise os datasets fornecidos
 3. 🏗️ Implemente a solução completa
 4. 📊 Crie relatórios profissionais
-
-## 🔧 Solução de Problemas
-
-### Problema: Jupyter não acessa
-```bash
-# Verifique se a porta está livre
-netstat -tulpn | grep 8888
-
-# Use porta alternativa
-jupyter notebook --port=8889
-```
-
-### Problema: Great Expectations não funciona
-```bash
-# 1. Reconstrua a imagem Docker com Great Expectations
-docker-compose down
-docker-compose build --no-cache
-docker-compose up -d
-
-# 2. Ou instale manualmente no container
-docker exec -it pyspark_aula_container pip install great-expectations==0.18.8 sqlalchemy==1.4.46
-
-# 3. Verifique a instalação no notebook
-import great_expectations as gx
-print(gx.__version__)
-```
-
-### Problema: Jupyter não acessa
-```bash
-# Verifique se a porta está livre
-netstat -tulpn | grep 8888
-
-# Use porta alternativa
-jupyter notebook --port=8889
-```
-
-### Problema: Docker não funciona
-```bash
-# Verifique se Docker está rodando
-docker --version
-docker-compose --version
-
-# Reconstrua a imagem
-docker-compose down
-docker-compose build --no-cache
-docker-compose up
-```
-
-## 📊 Notebooks Disponíveis
-
-### 🔍 **exporaDataSets.ipynb** - Exploração Inicial dos Dados
-Notebook introdutório que demonstra como:
-- Carregar os 4 datasets do projeto TechCommerce
-- Verificar estrutura e quantidade de registros
-- Identificar valores nulos e problemas básicos
-- Criar análises consolidadas dos dados
-
-**Ideal para**: Primeiro contato com os dados e compreensão da estrutura.
-
-### 🧪 **Lab_DataOps_Governanca_Qualidade.ipynb** - Laboratório Principal
-Laboratório completo com Great Expectations para:
-- Implementar validações de qualidade com pandas
-- Aplicar as 6 dimensões da qualidade
-- Criar expectativas automatizadas
-- Pipeline DataOps completo: validação → correção → re-validação
-
-**Ideal para**: Aprendizado prático de DataOps e Great Expectations.
-
-### 🧪 **test_great_expectations.ipynb** - Teste do Ambiente
-Notebook de diagnóstico para:
-- Verificar instalação do Great Expectations
-- Testar Data Context
-- Validar configuração do ambiente
-- Executar testes básicos
-
-**Ideal para**: Diagnóstico de problemas e verificação do ambiente.
-
-## 📊 Datasets do Desafio
-
-Os datasets simulam uma empresa de e-commerce (**TechCommerce**) com problemas reais de qualidade:
-
-| Dataset | Registros | Problemas Principais |
-|---------|-----------|---------------------|
-| **clientes.csv** | 16 | Duplicatas, emails inválidos, campos vazios |
-| **produtos.csv** | 20 | Preços negativos, categorias vazias, duplicatas |
-| **vendas.csv** | 25 | Integridade referencial, datas futuras, cálculos incorretos |
-| **logistica.csv** | 22 | Datas inconsistentes, campos vazios, duplicatas |
-
-## 🤝 Contribuição
-
-### Como Contribuir
-1. Fork o repositório
-2. Crie uma branch para sua feature
-3. Faça commit das mudanças
-4. Abra um Pull Request
-
-### Reportar Problemas
-- Use as **Issues** do GitHub
-- Inclua logs de erro completos
-- Descreva o ambiente utilizado
 
 ### Recursos Adicionais
 - 📚 [Documentação Great Expectations](https://docs.greatexpectations.io/)
